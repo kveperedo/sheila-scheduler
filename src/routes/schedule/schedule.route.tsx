@@ -19,8 +19,8 @@ export const Route = createFileRoute('/')({
 		const currentDate = dayjs();
 
 		return {
-			month: Number(search?.month || currentDate.month()),
-			year: Number(search?.year || currentDate.year()),
+			month: Number(search?.month ?? currentDate.month()),
+			year: Number(search?.year ?? currentDate.year()),
 		};
 	},
 });
